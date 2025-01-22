@@ -1,8 +1,9 @@
 using System.Collections.Generic;
+using Vehicle.Entities;
 
 namespace Vehicle.Entities
 {
-    public class Garage
+    public class CarInventory
     {
         public List<Car> Cars { get; private set; } = new List<Car>();
 
@@ -14,5 +15,6 @@ namespace Vehicle.Entities
         {
             Cars.Remove(car);
         }
+        
     }
 }

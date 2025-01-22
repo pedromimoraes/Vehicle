@@ -9,14 +9,9 @@ namespace Vehicle
         public static void Main(string[] args)
         {
             OrderCarService service = new OrderCarService();
-
-            service.GetCarManufacturer("Audi");
-            service.GetCarModel("R8");
-            service.GetCarColor(Color.Black);
-
             Car car = new Car(service);
             
-            Console.WriteLine(GeneratePlateService.Plate());
+            Console.WriteLine(car.Plate);
         }
     }
 }
