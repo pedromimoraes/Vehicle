@@ -1,7 +1,10 @@
-namespace Vehicle.Entities.Enums;
+using Vehicle.Entities.Services;
+
+namespace Vehicle.Entities.Enums
+{
 /// <summary>
 /// Este Enum contém a lista de cores disponíveis para os veículos.
-/// Esse Enum é utilizado na classe OrderCarService.
+/// Este Enum é utilizado pela classe <see cref="OrderCarService"/> para definir a cor do veículo solicitado.
 /// </summary>
 public enum Color : int
 {
@@ -11,4 +14,5 @@ public enum Color : int
     Black   = 3,
     White   = 4, 
     Pink    = 5
+}
 }
