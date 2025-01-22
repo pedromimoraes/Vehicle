@@ -1,0 +1,14 @@
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\bin\Debug\net9.0\Vehicle.exe
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\bin\Debug\net9.0\Vehicle.deps.json
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\bin\Debug\net9.0\Vehicle.runtimeconfig.json
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\bin\Debug\net9.0\Vehicle.dll
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\bin\Debug\net9.0\Vehicle.pdb
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\obj\Debug\net9.0\Vehicle.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\obj\Debug\net9.0\Vehicle.AssemblyInfoInputs.cache
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\obj\Debug\net9.0\Vehicle.AssemblyInfo.cs
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\obj\Debug\net9.0\Vehicle.csproj.CoreCompileInputs.cache
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\obj\Debug\net9.0\Vehicle.dll
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\obj\Debug\net9.0\refint\Vehicle.dll
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\obj\Debug\net9.0\Vehicle.pdb
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\obj\Debug\net9.0\Vehicle.genruntimeconfig.cache
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\obj\Debug\net9.0\ref\Vehicle.dll
