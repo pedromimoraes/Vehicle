@@ -4,7 +4,7 @@ using Vehicle.Entities;
 namespace Vehicle.Entities
 {
     /// <summary>
-    /// Esta classe é utilizada para gerenciar os veículos criados através de métodos CRUD.
+    /// Esta classe é utilizada para armazenar e gerenciar os veículos criados através de métodos CRUD.
     /// </summary>
     /// <example>
     /// Exemplo de uso:
@@ -50,7 +50,7 @@ namespace Vehicle.Entities
             return Cars.FirstOrDefault(car => car.Plate == plate);
         }
         /// <summary>
-        /// Este método remove da lista: <see cref="Cars"/> o veículo informado como parâmetro da lista.
+        /// Este método remove da lista: <see cref="Cars"/> o veículo informado como parâmetro.
         /// </summary>
         /// <param name="car"></param>
         /// <example>
