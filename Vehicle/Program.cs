@@ -2,9 +2,10 @@
 using Vehicle.Entities.Enums;
 using Vehicle.Entities.Services;
 
-// TODO: Adicionar comentários XML à classe Vehicle.
 // TODO: Aplicar polimorfismo na classe Program se utilizando da classe 'Car' e 'Vehicle'.
 // TODO: Transformar o serviço OrderClassService em OrderVehicleService.
+// TODO: Corrigir as mensagens de erro nas 'string' das classes OrderVehicleService e VehicleInventory.
+// TODO: Avaliar a aplicação do try-catch no meu código.
 
 namespace Vehicle
 {
