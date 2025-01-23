@@ -27,3 +27,4 @@ C:\Users\Pedro\Desktop\dotnet\Vehicle\Vehicle\obj\Debug\net9.0\refint\Vehicle.dl
 C:\Users\Pedro\Desktop\dotnet\Vehicle\Vehicle\obj\Debug\net9.0\Vehicle.pdb
 C:\Users\Pedro\Desktop\dotnet\Vehicle\Vehicle\obj\Debug\net9.0\Vehicle.genruntimeconfig.cache
 C:\Users\Pedro\Desktop\dotnet\Vehicle\Vehicle\obj\Debug\net9.0\ref\Vehicle.dll
+C:\Users\pedro.moraes\Documents\C#\Vehicle\Vehicle\obj\Debug\net9.0\Vehicle.sourcelink.json

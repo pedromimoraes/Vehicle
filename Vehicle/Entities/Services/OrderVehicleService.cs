@@ -3,25 +3,32 @@ using Vehicle.Entities.Enums;
 namespace Vehicle.Entities.Services
 {
     /// <summary>
-    /// Serviço responsável por processar a criação de um novo carro.
+    /// Serviço responsável por processar a criação de um novo veículo.
     /// </summary>
     /// <remarks>
-    /// Este serviço é utilizado como parâmetro para criar um carro através da classe <see cref="Car"/>.
+    /// Este serviço é utilizado como parâmetro para criar um veículo através da classe <see cref="Vehicle"/>.
     /// </remarks>
     /// <example>
     /// Exemplo de uso:
     /// <code>
-    /// OrderCarService service = new OrderCarService();
+    /// OrderVehicleService service = new OrderVehicleService();
+    /// service.SetType("Carro");
     /// service.SetManufacturer("Audi");
     /// service.SerModel("R8");
     /// service.SetColor(Color.Black);
     /// </code>
     /// </example>
-    /// <seealso cref="Car"/>
+    /// <seealso cref="Vehicle"/>
     /// <seealso cref="Vehicle.Entities.Enums.Color"/>
-    public class OrderCarService
+    public class OrderVehicleService
     {
-        // Propriedades que representam um veículo.
+        /// <summary>
+        /// Propriedade representando o tipo do veículo.
+        /// </summary>
+        /// <value>
+        /// O tipo do veículo. Exemplo: Tipo.Carro, Tipo.Moto; 
+        /// </value>
+        public Enums.Type Type { get; private set; }
 
         /// <summary>
         /// Propriedade representando o fabricante do veículo.
@@ -47,16 +54,21 @@ namespace Vehicle.Entities.Services
         /// </value>
         public Color Color { get; private set; }
 
-        /// <summary>
-        /// Propriedade representando a placa do veículo, segundo o formato Mercosul.
-        /// Exemplo: "BRA-1B23".
-        /// </summary>
-        /// <remarks>
-        /// O valor desta propriedade é gerado automáticamente através do método <see cref="GeneratePlateService.Plate"/>
-        /// </remarks>
-        public string Plate { get; private set; } = GeneratePlateService.Plate();
-
         // Métodos utilizados para atribuir valores às propriedades do veículo.
+        
+        /// <summary>
+        /// Método usado para atribuir um tipo ao veículo.
+        /// </summary>
+        /// <param name="type">
+        /// O fabricante do veículo. Exemplo: "Honda", "Fiat".
+        /// </param>
+        /// <remarks>
+        /// Este método atribui um valor à propriedade <see cref="Type"/>
+        /// </remarks>
+        public void SetType(Enums.Type type)
+        {
+            Type = type;
+        }
 
         /// <summary>
         /// Método usado para atribuir um fabricante ao veículo.

@@ -2,11 +2,9 @@
 using Vehicle.Entities.Enums;
 using Vehicle.Entities.Services;
 
-// TODO: Adicionar comentários XML à classe CarInventory.
-// TODO: Adicionar comentários XML à classe Car.
-// TODO: Substituir a classe 'Car' por 'Vehicle'.
-// TODO: Criar uma nova classe 'Car' herdando as características de 'Vehicle'.
+// TODO: Adicionar comentários XML à classe Vehicle.
 // TODO: Aplicar polimorfismo na classe Program se utilizando da classe 'Car' e 'Vehicle'.
+// TODO: Transformar o serviço OrderClassService em OrderVehicleService.
 
 namespace Vehicle
 {
@@ -14,29 +12,27 @@ namespace Vehicle
     {
         public static void Main(string[] args)
         {
-            OrderCarService service = new OrderCarService();
-            
-            Console.Write("Insira o fabricante do carro: ");
-            service.SetManufacturer(Console.ReadLine());
-            
-            Console.Write("Insira o modelo do carro: ");
-            service.SetModel(Console.ReadLine());
-            
-            Console.Write("Insira a cor do carro: ");
-            string cor = Console.ReadLine();
+            OrderVehicleService order = new OrderVehicleService();
 
-            if (Enum.TryParse(cor, true, out Color color))
-            {
-                service.SetColor(color);
-            }
-            else
-            {
-                Console.WriteLine("Cor invalida! Usando cor padrão.");
-                service.SetColor(Color.Preto);
-            }
-            Car car = new Car(service);
+            order.SetType(Entities.Enums.Type.Carro);
+            order.SetManufacturer("Fiat");
+            order.SetModel("Uno");
+            order.SetColor(Color.Cinza);
 
-            Console.WriteLine(car);
+            Entities.Vehicle vehicle1 = new Entities.Vehicle(order);
+
+            order.SetType(Entities.Enums.Type.Carro);
+            order.SetManufacturer("Honda");
+            order.SetModel("Civic");
+            order.SetColor(Color.Preto);
+
+            Entities.Vehicle vehicle2 = new Entities.Vehicle(order);
+
+            VehicleInventory.AddVehicle(vehicle1);
+            VehicleInventory.AddVehicle(vehicle2);
+
+            VehicleInventory.ShowInventory();
+
         }
     }
 }
