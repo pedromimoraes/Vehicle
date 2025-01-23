@@ -2,6 +2,8 @@
 using Vehicle.Entities.Enums;
 using Vehicle.Entities.Services;
 
+// TODO: Adicionar comentários XML à classe CarInventory.
+//TODO: Adicionar comentários XML à classe Car.
 namespace Vehicle
 {
     public class Program
