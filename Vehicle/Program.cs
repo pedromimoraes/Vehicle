@@ -2,8 +2,7 @@
 using Vehicle.Entities.Enums;
 using Vehicle.Entities.Services;
 
-// TODO: Aplicar polimorfismo na classe Program se utilizando da classe 'Car' e 'Vehicle'.
-// TODO: Transformar o serviço OrderClassService em OrderVehicleService.
+// TODO: Implementar retorno Default no Vehicle.
 // TODO: Corrigir as mensagens de erro nas 'string' das classes OrderVehicleService e VehicleInventory.
 // TODO: Implementar a classe 'Program'.
 // TODO: Implementar um menu para interação com o programa.

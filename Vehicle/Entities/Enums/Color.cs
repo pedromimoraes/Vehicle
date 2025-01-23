@@ -12,13 +12,14 @@ namespace Vehicle.Entities.Enums
     /// <seealso cref="OrderCarService"/>
     public enum Color : int
     {
-        Vermelho = 0,
-        Verde = 1,
-        Azul = 2,
-        Preto = 3,
-        Branco = 4,
-        Rosa = 5,
-        Cinza = 6,
-        Laranja = 7
+        Vazio       = 0,
+        Vermelho    = 1,
+        Verde       = 2,
+        Azul        = 3,
+        Preto       = 4,
+        Branco      = 5,
+        Rosa        = 6,
+        Cinza       = 7,
+        Laranja     = 8
     }
 }

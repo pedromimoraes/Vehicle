@@ -25,7 +25,7 @@ namespace Vehicle.Entities
         /// <value>
         /// O tipo do veículo, fornecido pela propriedade Manufacturer do serviço <see cref="OrderVehicleService"/>
         /// </value>
-        public string Manufacturer { get; private set; } = service.Manufacturer;
+        public string ? Manufacturer { get; private set; } = service.Manufacturer;
 
         /// <summary>
         /// Propriedade representando o modelo do veículo.
@@ -33,7 +33,7 @@ namespace Vehicle.Entities
         /// <value>
         /// O tipo do veículo, fornecido pela propriedade Model do serviço <see cref="OrderVehicleService"/>
         /// </value>
-        public string Model { get; private set; } = service.Model;
+        public string ? Model { get; private set; } = service.Model;
 
         /// <summary>
         /// Propriedade representando a cor do veículo.

@@ -47,8 +47,9 @@ namespace Vehicle.Entities
         /// </returns>
         public static Vehicle GetVehicle(string plate)
         {
-            return Vehicles.FirstOrDefault(vehicle => vehicle.Plate == plate);
+            return Vehicles.FirstOrDefault(vehicle =>vehicle.Plate == plate);
         }
+
         /// <summary>
         /// Este método remove da lista: <see cref="Vehicles"/> o veículo informado como parâmetro.
         /// </summary>

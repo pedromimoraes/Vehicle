@@ -36,7 +36,7 @@ namespace Vehicle.Entities.Services
         /// <value>
         /// O fabricante do veículo. Exemplo: "Honda", "Fiat". 
         /// </value>
-        public string Manufacturer { get; private set; }
+        public string ? Manufacturer { get; private set; }
 
         /// <summary>
         /// Propriedade representando o modelo do veículo.
@@ -44,7 +44,7 @@ namespace Vehicle.Entities.Services
         /// <value>
         /// O modelo do veículo. Exemplo: "Civic", "Uno". 
         /// </value>
-        public string Model { get; private set; }
+        public string ? Model { get; private set; }
 
         /// <summary>
         /// Propriedade representando a cor do veículo.
@@ -69,7 +69,6 @@ namespace Vehicle.Entities.Services
         {
             Type = type;
         }
-
         /// <summary>
         /// Método usado para atribuir um fabricante ao veículo.
         /// </summary>
@@ -81,7 +80,14 @@ namespace Vehicle.Entities.Services
         /// </remarks>
         public void SetManufacturer(string manufacturer)
         {
-            Manufacturer = manufacturer;
+            if(manufacturer != null)
+            {
+                Manufacturer = manufacturer;
+            }
+            else
+            {
+                Manufacturer = "null";
+            }
         }
 
         /// <summary>
