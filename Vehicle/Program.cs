@@ -3,7 +3,11 @@ using Vehicle.Entities.Enums;
 using Vehicle.Entities.Services;
 
 // TODO: Adicionar comentários XML à classe CarInventory.
-//TODO: Adicionar comentários XML à classe Car.
+// TODO: Adicionar comentários XML à classe Car.
+// TODO: Substituir a classe 'Car' por 'Vehicle'.
+// TODO: Criar uma nova classe 'Car' herdando as características de 'Vehicle'.
+// TODO: Aplicar polimorfismo na classe Program se utilizando da classe 'Car' e 'Vehicle'.
+
 namespace Vehicle
 {
     public class Program
