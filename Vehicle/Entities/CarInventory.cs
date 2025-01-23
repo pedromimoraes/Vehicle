@@ -15,6 +15,9 @@ namespace Vehicle.Entities
         {
             Cars.Remove(car);
         }
-        
+        public Car GetCar(string plate)
+        {
+            return Cars.FirstOrDefault(car => car.Plate == plate);
+        }
     }
 }

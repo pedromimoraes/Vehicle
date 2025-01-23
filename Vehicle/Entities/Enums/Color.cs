@@ -9,6 +9,7 @@ namespace Vehicle.Entities.Enums
 /// Este Enum é utilizado pela classe <see cref="OrderCarService"/>
 /// para representar a cor do veículo solicitado.
 /// </remarks>
+/// <seealso cref="OrderCarService"/>
 public enum Color : int
 {
     Red     = 0,
