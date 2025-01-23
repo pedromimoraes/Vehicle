@@ -22,7 +22,7 @@ namespace Vehicle.Entities.Services
     public class OrderCarService
     {
         // Propriedades que representam um veículo.
-        
+
         /// <summary>
         /// Propriedade representando o fabricante do veículo.
         /// </summary>
@@ -30,6 +30,7 @@ namespace Vehicle.Entities.Services
         /// O fabricante do veículo. Exemplo: "Honda", "Fiat". 
         /// </value>
         public string Manufacturer { get; private set; }
+
         /// <summary>
         /// Propriedade representando o modelo do veículo.
         /// </summary>
@@ -37,7 +38,7 @@ namespace Vehicle.Entities.Services
         /// O modelo do veículo. Exemplo: "Civic", "Uno". 
         /// </value>
         public string Model { get; private set; }
-        
+
         /// <summary>
         /// Propriedade representando a cor do veículo.
         /// </summary>
@@ -45,7 +46,7 @@ namespace Vehicle.Entities.Services
         /// A cor do veículo. Exemplo: Color.Black, Color.White. 
         /// </value>
         public Color Color { get; private set; }
-        
+
         /// <summary>
         /// Propriedade representando a placa do veículo, segundo o formato Mercosul.
         /// Exemplo: "BRA-1B23".
@@ -54,9 +55,9 @@ namespace Vehicle.Entities.Services
         /// O valor desta propriedade é gerado automáticamente através do método <see cref="GeneratePlateService.Plate"/>
         /// </remarks>
         public string Plate { get; private set; } = GeneratePlateService.Plate();
-        
+
         // Métodos utilizados para atribuir valores às propriedades do veículo.
-        
+
         /// <summary>
         /// Método usado para atribuir um fabricante ao veículo.
         /// </summary>
@@ -70,6 +71,7 @@ namespace Vehicle.Entities.Services
         {
             Manufacturer = manufacturer;
         }
+
         /// <summary>
         /// Método usado para atribuir um modelo ao veículo.
         /// </summary>
@@ -83,6 +85,7 @@ namespace Vehicle.Entities.Services
         {
             Model = model;
         }
+
         /// <summary>
         /// Método usado para atribuir uma cor ao veículo.
         /// </summary>

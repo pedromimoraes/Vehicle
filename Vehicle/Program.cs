@@ -9,9 +9,28 @@ namespace Vehicle
         public static void Main(string[] args)
         {
             OrderCarService service = new OrderCarService();
-            Car car = new Car(service);
             
-            Console.WriteLine(car.Plate);
+            Console.Write("Insira o fabricante do carro: ");
+            service.SetManufacturer(Console.ReadLine());
+            
+            Console.Write("Insira o modelo do carro: ");
+            service.SetModel(Console.ReadLine());
+            
+            Console.Write("Insira a cor do carro: ");
+            string cor = Console.ReadLine();
+
+            if (Enum.TryParse(cor, true, out Color color))
+            {
+                service.SetColor(color);
+            }
+            else
+            {
+                Console.WriteLine("Cor invalida! Usando cor padrão.");
+                service.SetColor(Color.Preto);
+            }
+            Car car = new Car(service);
+
+            Console.WriteLine(car);
         }
     }
 }

@@ -3,19 +3,21 @@ using Vehicle.Entities;
 
 namespace Vehicle.Entities
 {
-    public class CarInventory
+    public static class CarInventory
     {
-        public List<Car> Cars { get; private set; } = new List<Car>();
+        public static List<Car> Cars { get; private set; } = new List<Car>();
 
-        public void AddCar(Car car)
+        public static void AddCar(Car car)
         {
             Cars.Add(car);
         }
-        public void DeleteCar(Car car)
+
+        public static void DeleteCar(Car car)
         {
             Cars.Remove(car);
         }
-        public Car GetCar(string plate)
+
+        public static Car GetCar(string plate)
         {
             return Cars.FirstOrDefault(car => car.Plate == plate);
         }
