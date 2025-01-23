@@ -12,7 +12,8 @@ namespace Vehicle.Entities.Enums
     /// <seealso cref="OrderVehicleService"/>
     public enum Type : int
     {
-        Moto = 0,
-        Carro = 1,
+        Moto        = 0,
+        Carro       = 1,
+        Aeronave    = 2
     }
 }
