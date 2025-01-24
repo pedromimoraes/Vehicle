@@ -10,10 +10,13 @@ namespace Vehicle.Entities.Enums
     /// para representar o tipo do veículo solicitado.
     /// </remarks>
     /// <seealso cref="OrderVehicleService"/>
-    public enum Type : int
+    public enum Type
     {
-        Moto        = 0,
-        Carro       = 1,
-        Aeronave    = 2
+        Moto,
+        Carreta,
+        Bicicleta,
+        Carro,
+        Barco,
+        Aeronave
     }
 }
