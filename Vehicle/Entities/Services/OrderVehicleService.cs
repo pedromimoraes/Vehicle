@@ -19,7 +19,7 @@ namespace Vehicle.Entities.Services
     /// </code>
     /// </example>
     /// <seealso cref="Vehicle"/>
-    /// <seealso cref="Vehicle.Entities.Enums.Color"/>
+    /// <seealso cref="Enums.Color"/>
     public class OrderVehicleService
     {
         /// <summary>
@@ -80,14 +80,7 @@ namespace Vehicle.Entities.Services
         /// </remarks>
         public void SetManufacturer(string manufacturer)
         {
-            if(manufacturer != null)
-            {
-                Manufacturer = manufacturer;
-            }
-            else
-            {
-                Manufacturer = "null";
-            }
+            Manufacturer = manufacturer;
         }
 
         /// <summary>
@@ -113,7 +106,7 @@ namespace Vehicle.Entities.Services
         /// <remarks>
         /// Este método atribui um valor à propriedade <see cref="Color"/>
         /// </remarks>
-        /// <seealso cref="Vehicle.Entities.Enums.Color"/>
+        /// <seealso cref="Enums.Color"/>
         public void SetColor(Color color)
         {
             Color = color;

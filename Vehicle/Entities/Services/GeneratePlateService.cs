@@ -1,12 +1,10 @@
-using System.Text;
-
 namespace Vehicle.Entities.Services
 {
     /// <summary>
     /// Este serviço é responsável por gerar placas utilizadas em veículos.
     /// </summary>
     /// <remarks>
-    /// Este serviço é utilizado na classe <see cref="OrderCarService"/>
+    /// Este serviço é utilizado na classe <see cref="OrderVehicleService"/>
     /// para gerar uma nova placa ao veículo instanciado.
     /// </remarks>
     public static class GeneratePlateService
@@ -25,7 +23,7 @@ namespace Vehicle.Entities.Services
         /// Console.WriteLine(plate); // Exemplo de resultado: "BRA-7B77".
         /// </code>
         /// </example>
-        /// <seealso cref="OrderCarService"/>
+        /// <seealso cref="OrderVehicleService"/>
         public static string Plate()
         {
             // Gerando uma placa de 8 caracteres, segundo o padrão Mercosul.

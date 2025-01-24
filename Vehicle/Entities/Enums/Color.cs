@@ -6,20 +6,19 @@ namespace Vehicle.Entities.Enums
     /// Este Enum contém a lista de cores disponíveis para os veículos.
     /// </summary>
     /// <remarks>
-    /// Este Enum é utilizado pela classe <see cref="OrderCarService"/>
+    /// Este Enum é utilizado pela classe <see cref="OrderVehicleService"/>
     /// para representar a cor do veículo solicitado.
     /// </remarks>
-    /// <seealso cref="OrderCarService"/>
+    /// <seealso cref="OrderVehicleService"/>
     public enum Color : int
     {
-        Vazio       = 0,
-        Vermelho    = 1,
-        Verde       = 2,
-        Azul        = 3,
-        Preto       = 4,
-        Branco      = 5,
-        Rosa        = 6,
-        Cinza       = 7,
-        Laranja     = 8
+        Vermelho    = 0,
+        Verde       = 1,
+        Azul        = 2,
+        Preto       = 3,
+        Branco      = 4,
+        Rosa        = 5,
+        Cinza       = 6,
+        Laranja     = 7
     }
 }

@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using Vehicle.Entities;
-
+using Vehicle.Entities.Services;
 namespace Vehicle.Entities
 {
     /// <summary>
-    /// Esta classe é utilizada para armazenar e gerenciar os veículos criados através de métodos CRUD.
+    /// Esta classe é utilizada para armazenar e gerenciar os veículos criados via métodos CRUD.
     /// </summary>
     /// <example>
     /// Exemplo de uso:
@@ -18,13 +18,10 @@ namespace Vehicle.Entities
         /// <summary>
         /// Esta propriedade representa uma lista de veículos.
         /// </summary>
-        /// <value>
-        /// Uma lista de veículos. Por exemplo: List<Vehicle> Vehicles = new List<Vehicle>();
-        /// </value>
-        public static List<Vehicle> Vehicles { get; private set; } = new List<Vehicle>();
+        private static List<Vehicle> Vehicles { get;  set; } = new List<Vehicle>();
 
         /// <summary>
-        /// Este método adiciona à lista  <see cref="Vehicles"\> um veículo informado como parâmetro.
+        /// Este método adiciona à lista  <see cref="Vehicles"/> um veículo informado como parâmetro.
         /// </summary>
         /// <param name="vehicle"></param>
         public static void AddVehicle(Vehicle vehicle)
@@ -45,9 +42,9 @@ namespace Vehicle.Entities
         /// </code>
         /// </example>
         /// </returns>
-        public static Vehicle GetVehicle(string plate)
+        public static Vehicle? GetVehicle(string plate)
         {
-            return Vehicles.FirstOrDefault(vehicle =>vehicle.Plate == plate);
+            return Vehicles.FirstOrDefault(vehicle => vehicle.Plate == plate);
         }
 
         /// <summary>
@@ -82,6 +79,11 @@ namespace Vehicle.Entities
             {
                 System.Console.WriteLine($"{vehicle.Type} {vehicle.Manufacturer} {vehicle.Model} {vehicle.Color}, {vehicle.Plate}");
             }
+        }
+
+        public static void ShowVehicle(Vehicle vehicle)
+        { 
+            System.Console.WriteLine($"{vehicle.Type} {vehicle.Manufacturer} {vehicle.Model} {vehicle.Color}, {vehicle.Plate}");
         }
     }
 }
