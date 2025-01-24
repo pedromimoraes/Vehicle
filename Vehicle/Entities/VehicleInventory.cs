@@ -62,6 +62,11 @@ namespace Vehicle.Entities
             Vehicles.Remove(vehicle);
         }
 
+        public static void ShowVehicle(Vehicle vehicle)
+        { 
+            System.Console.WriteLine($"{vehicle.Type}, {vehicle.Manufacturer} {vehicle.Model} {vehicle.Color}, {vehicle.Plate}");
+        }
+
         /// <summary>
         /// Este método apresenta todos os veículos armazenados na lista: <see cref="Vehicles"/>.
         /// </summary>
@@ -77,13 +82,8 @@ namespace Vehicle.Entities
         {
             foreach(Vehicle vehicle in Vehicles)
             {
-                System.Console.WriteLine($"{vehicle.Type} {vehicle.Manufacturer} {vehicle.Model} {vehicle.Color}, {vehicle.Plate}");
+                System.Console.WriteLine($"{vehicle.Type}, {vehicle.Manufacturer} {vehicle.Model} {vehicle.Color}, {vehicle.Plate}");
             }
-        }
-
-        public static void ShowVehicle(Vehicle vehicle)
-        { 
-            System.Console.WriteLine($"{vehicle.Type} {vehicle.Manufacturer} {vehicle.Model} {vehicle.Color}, {vehicle.Plate}");
         }
     }
 }

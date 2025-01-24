@@ -10,7 +10,8 @@ namespace Vehicle.Entities
         public static bool Show()
         {
             OrderVehicleService service = new OrderVehicleService();
-            
+
+            Console.Clear();
             Console.WriteLine("===== | GERENCIADOR DE VEÍCULOS | =====");
             Console.WriteLine();
             Console.WriteLine("=== Selecione uma opção ===");
@@ -25,79 +26,87 @@ namespace Vehicle.Entities
 
             switch (option)
             {
-                case 1 :
+                case 1:
+                    Console.Clear();
+                    Console.WriteLine("===== | GERENCIADOR DE VEÍCULOS | =====");
                     Console.WriteLine();
                     Console.WriteLine("Insira o tipo do veículo:");
                     Console.WriteLine();
+
                     Console.Write("Tipos disponíveis: ");
-                    foreach (Enums.Type type in Enum.GetValues(typeof(Enums.Type)))
-                    {
-                        if(type == Enums.Type.Moto)
-                        {
-                            Console.Write($"{type}, ");
-                        }
-                        else if(type == Enums.Type.Aeronave)
-                        {
-                            Console.Write($"{type.ToString().ToLower()}.");
-                        }
-                        else
-                        {
-                            Console.Write($"{type.ToString().ToLower()}, ");
-                        }
-                    }
+                    EnumFormatService.Format(Enums.Type.Moto);
+
                     Console.WriteLine();
                     Console.Write("Tipo: ");
                     string t = Console.ReadLine();
+
                     service.SetType((Enums.Type)Enum.Parse(typeof(Enums.Type), t, true));
-                    
+
+                    Console.Clear();
+                    Console.WriteLine("===== | GERENCIADOR DE VEÍCULOS | =====");
+                    Console.WriteLine();
                     Console.WriteLine($"Insira o fabricante do {t}:");
+                    Console.WriteLine();
+                    System.Console.Write("Fabricante: ");
+
                     string f = Console.ReadLine();
                     service.SetManufacturer(f);
-                    
+
+                    Console.Clear();
+                    Console.WriteLine("===== | GERENCIADOR DE VEÍCULOS | =====");
+                    Console.WriteLine();
                     Console.WriteLine($"Insira o modelo do {t}:");
+                    Console.WriteLine();
+                    System.Console.Write("Modelo: ");
+
                     string m = Console.ReadLine();
                     service.SetManufacturer(m);
-                    
-                    Console.WriteLine($"Insira a cor do {t}:");
+
+                    Console.Clear();
+                    Console.WriteLine("===== | GERENCIADOR DE VEÍCULOS | =====");
                     Console.WriteLine();
-                    Console.WriteLine("Cores disponíveis:");
-                    foreach (Enums.Color color in Enum.GetValues(typeof(Enums.Color)))
-                    {
-                        if(color == Enums.Color.Vermelho)
-                        {
+                    Console.WriteLine($"Insira a cor do {t}:");
 
-                            Console.Write($"{color}, ");
-                        }
-                        else if(color == Enums.Color.Laranja)
-                        {
-                            Console.Write($"{color.ToString().ToLower()}.");
-                        }
-                        else
-                        {
-                            Console.Write($"{color.ToString().ToLower()}, ");
-                        }
-                    }
+                    Console.WriteLine();
 
+                    Console.Write("Cores disponíveis: ");
+                    EnumFormatService.Format(Enums.Color.Preto);
+
+                    Console.WriteLine();
                     Console.Write("Cor: ");
+
                     string c = Console.ReadLine();
                     service.SetColor((Enums.Color)Enum.Parse(typeof(Enums.Color), c, true));
 
                     Vehicle vehicle = new Vehicle(service);
 
+                    Console.WriteLine();
+                    Console.WriteLine($"{vehicle.Type}, {vehicle.Manufacturer} {vehicle.Model} {vehicle.Color} de placa: {vehicle.Plate} adicionado com sucesso.");
+                    Console.WriteLine();
+                    Console.WriteLine("Pressione qualquer botão para continuar..");
+                    Console.ReadKey();
                     VehicleInventory.AddVehicle(vehicle);
                     break;
-                
-                case 2 :
+
+                case 2:
+                    Console.Clear();
+                    Console.WriteLine("===== | GERENCIADOR DE VEÍCULOS | =====");
                     Console.WriteLine();
                     Console.Write("Insira a placa do veículo a ser removido: ");
                     string removePlate = Console.ReadLine().ToUpper();
 
                     Vehicle deleteVehicle = VehicleInventory.GetVehicle(removePlate);
                     VehicleInventory.DeleteVehicle(deleteVehicle);
-                    System.Console.WriteLine($"{deleteVehicle} removido com sucesso.");
+                    System.Console.WriteLine($"{deleteVehicle.Manufacturer} {deleteVehicle.Model} {deleteVehicle.Color} removido com sucesso.");
+
+                    Console.WriteLine();
+                    Console.WriteLine("Pressione qualquer botão para continuar..");
+                    Console.ReadKey();
                     break;
-                
-                case 3 :
+
+                case 3:
+                    Console.Clear();
+                    Console.WriteLine("===== | GERENCIADOR DE VEÍCULOS | =====");
                     Console.WriteLine();
                     Console.Write("Insira a placa do veículo a ser mostrado: ");
                     string showPlate = Console.ReadLine().ToUpper();
@@ -107,19 +116,35 @@ namespace Vehicle.Entities
                     System.Console.WriteLine();
 
                     VehicleInventory.ShowVehicle(getVehicle);
+                    Console.WriteLine();
+                    Console.WriteLine("Pressione qualquer botão para continuar..");
+                    Console.ReadKey();
                     break;
 
-                case 4 :
+                case 4:
+                    Console.Clear();
+                    Console.WriteLine("===== | GERENCIADOR DE VEÍCULOS | =====");
                     Console.WriteLine();
                     VehicleInventory.ShowInventory();
+                    Console.WriteLine();
+                    Console.WriteLine("Pressione qualquer botão para continuar..");
+                    Console.ReadKey();
                     break;
 
-                case 5 :
+                case 5:
+                    Console.Clear();
                     Console.WriteLine("Fechando o programa.");
+                    Console.WriteLine();
+                    Console.WriteLine("Pressione qualquer botão para continuar..");
+                    Console.ReadKey();
                     return false;
-                
-                default :
+
+                default:
+                    Console.Clear();
                     Console.WriteLine("Opção inválida.");
+                    Console.WriteLine();
+                    Console.WriteLine("Pressione qualquer botão para continuar..");
+                    Console.ReadKey();
                     break;
             }
             return true;
