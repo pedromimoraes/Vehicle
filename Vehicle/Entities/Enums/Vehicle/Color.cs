@@ -1,6 +1,6 @@
 using Vehicle.Entities.Services;
 
-namespace Vehicle.Entities.Enums.Global
+namespace Vehicle.Entities.Enums.Vehicle
 {
     /// <summary>
     /// Este Enum contém a lista de cores disponíveis para os veículos.
@@ -10,15 +10,15 @@ namespace Vehicle.Entities.Enums.Global
     /// para representar a cor do veículo solicitado.
     /// </remarks>
     /// <seealso cref="OrderVehicleService"/>
-    public enum Color : int
+    public enum Color
     {
-        Vermelho    = 0,
-        Verde       = 1,
-        Azul        = 2,
-        Preto       = 3,
-        Branco      = 4,
-        Rosa        = 5,
-        Cinza       = 6,
-        Laranja     = 7
+        Red,
+        Green,
+        Blue,
+        Black,
+        White,
+        Pink,
+        Grey,
+        Orange
     }
 }

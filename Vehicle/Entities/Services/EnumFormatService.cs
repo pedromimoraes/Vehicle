@@ -1,8 +1,8 @@
 using System.Text;
 
-namespace Vehicle.Entities.Enums
+namespace Vehicle.Entities.Services
 {
-    public class EnumFormatService()
+    public static class EnumFormatService
     {
         public static void Format(Enum e)
         {

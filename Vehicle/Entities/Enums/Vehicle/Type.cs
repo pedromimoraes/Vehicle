@@ -1,6 +1,6 @@
 using Vehicle.Entities.Services;
 
-namespace Vehicle.Entities.Enums.Global
+namespace Vehicle.Entities.Enums.Vehicle
 {
     /// <summary>
     /// Este Enum contém a lista de tipos disponíveis para os veículos.

@@ -32,16 +32,16 @@ namespace Vehicle.Entities
                     Console.WriteLine();
 
                     Console.Write("Tipos disponíveis: ");
-                    EnumFormatService.Format(Enums.Global.Type.Motocicleta);
+                    EnumFormatService.Format(Enums.Vehicle.Type.Motocicleta);
 
 
                     Console.WriteLine();
                     Console.Write("Tipo: ");
                     string t = Console.ReadLine();
 
-                    service.SetType((Enums.Global.Type)Enum.Parse(typeof(Enums.Global.Type), t, true));
+                    service.SetType((Enums.Vehicle.Type)Enum.Parse(typeof(Enums.Vehicle.Type), t, true));
 
-                    Enums.Global.Type tipo = (Enums.Global.Type)Enum.Parse(typeof(Enums.Global.Type), t, true);
+                    Enums.Vehicle.Type tipo = (Enums.Vehicle.Type)Enum.Parse(typeof(Enums.Vehicle.Type), t, true);
 
                     Console.Clear();
                     Console.WriteLine("===== | GERENCIADOR DE VEÍCULOS | =====");
@@ -78,13 +78,13 @@ namespace Vehicle.Entities
                     Console.WriteLine();
 
                     Console.Write("Cores disponíveis: ");
-                    EnumFormatService.Format(Enums.Global.Color.Preto);
+                    EnumFormatService.Format(Enums.Vehicle.Color.Black);
 
                     Console.WriteLine();
                     Console.Write("Cor: ");
 
                     string c = Console.ReadLine();
-                    service.SetColor((Enums.Global.Color)Enum.Parse(typeof(Enums.Global.Color), c, true));
+                    service.SetColor((Enums.Vehicle.Color)Enum.Parse(typeof(Enums.Vehicle.Color), c, true));
 
                     Vehicle vehicle = new Vehicle(service);
 

@@ -74,8 +74,8 @@ namespace Vehicle.Entities
         /// Exemplo de uso:
         /// <code>
         /// VehicleInventory.ShowInventory();
-        /// Carro Fiat Uno Cinza, WCV-4O51 // Exemplo de saída.
-        /// Carro Honda Civic Preto, RKH-8O0 // Exemplo de saída.
+        /// Carro Fiat Uno Grey, WCV-4O51 // Exemplo de saída.
+        /// Carro Honda Civic Black, RKH-8O0 // Exemplo de saída.
         /// </code>
         /// </example>
         public static void ShowInventory()
