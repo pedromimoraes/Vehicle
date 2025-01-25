@@ -1,6 +1,6 @@
 namespace Vehicle.Entities.Services
 {
-    public class GrammarFormatService
+    public static class GrammarFormatService
     {
         public static string GenreFormat(string p, string s)
         {
