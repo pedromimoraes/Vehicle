@@ -1,4 +1,4 @@
-using Vehicle.Entities.Enums;
+using Vehicle.Entities.Enums.Global;
 
 namespace Vehicle.Entities.Services
 {
@@ -19,7 +19,7 @@ namespace Vehicle.Entities.Services
     /// </code>
     /// </example>
     /// <seealso cref="Vehicle"/>
-    /// <seealso cref="Enums.Color"/>
+    /// <seealso cref="Enums.Global.Color"/>
     public class OrderVehicleService
     {
         /// <summary>
@@ -28,7 +28,7 @@ namespace Vehicle.Entities.Services
         /// <value>
         /// O tipo do veículo. Exemplo: Tipo.Carro, Tipo.Moto; 
         /// </value>
-        public Enums.Type Type { get; private set; }
+        public Enums.Global.Type Type { get; private set; }
 
         /// <summary>
         /// Propriedade representando o fabricante do veículo.
@@ -65,7 +65,7 @@ namespace Vehicle.Entities.Services
         /// <remarks>
         /// Este método atribui um valor à propriedade <see cref="Type"/>
         /// </remarks>
-        public void SetType(Enums.Type type)
+        public void SetType(Enums.Global.Type type)
         {
             Type = type;
         }
@@ -106,7 +106,7 @@ namespace Vehicle.Entities.Services
         /// <remarks>
         /// Este método atribui um valor à propriedade <see cref="Color"/>
         /// </remarks>
-        /// <seealso cref="Enums.Color"/>
+        /// <seealso cref="Enums.Global.Color"/>
         public void SetColor(Color color)
         {
             Color = color;

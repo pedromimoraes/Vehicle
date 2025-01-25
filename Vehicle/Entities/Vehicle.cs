@@ -1,4 +1,4 @@
-using Vehicle.Entities.Enums;
+using Vehicle.Entities.Enums.Global;
 using Vehicle.Entities.Services;
 using System.Text;
 
@@ -17,7 +17,7 @@ namespace Vehicle.Entities
         /// <value>
         /// O tipo do veículo, fornecido pela propriedade Type do serviço <see cref="OrderVehicleService"/>
         /// </value>
-        public Enums.Type Type { get; private set; } = service.Type;
+        public Enums.Global.Type Type { get; private set; } = service.Type;
 
         /// <summary>
         /// Propriedade representando o fabricante do veículo.

@@ -1,11 +1,9 @@
-using System;
-using System.Text;
-using Vehicle.Entities.Services;
 using Vehicle.Entities.Enums;
+using Vehicle.Entities.Services;
 
 namespace Vehicle.Entities
 {
-    public class Menu
+    public class MainMenu
     {
         public static bool Show()
         {
@@ -34,49 +32,59 @@ namespace Vehicle.Entities
                     Console.WriteLine();
 
                     Console.Write("Tipos disponíveis: ");
-                    EnumFormatService.Format(Enums.Type.Moto);
+                    EnumFormatService.Format(Enums.Global.Type.Motocicleta);
+
 
                     Console.WriteLine();
                     Console.Write("Tipo: ");
                     string t = Console.ReadLine();
 
-                    service.SetType((Enums.Type)Enum.Parse(typeof(Enums.Type), t, true));
+                    service.SetType((Enums.Global.Type)Enum.Parse(typeof(Enums.Global.Type), t, true));
+
+                    Enums.Global.Type tipo = (Enums.Global.Type)Enum.Parse(typeof(Enums.Global.Type), t, true);
 
                     Console.Clear();
                     Console.WriteLine("===== | GERENCIADOR DE VEÍCULOS | =====");
                     Console.WriteLine();
-                    Console.WriteLine($"Insira o fabricante do {t}:");
-                    Console.WriteLine();
-                    System.Console.Write("Fabricante: ");
 
+                    Console.WriteLine();
+
+                    Console.WriteLine(GrammarFormatService.GenreFormat(t, $"Insira a fabricante do {tipo}: "));
+                    Console.WriteLine();
+
+                    System.Console.Write("Fabricante: ");
                     string f = Console.ReadLine();
+
                     service.SetManufacturer(f);
 
+
                     Console.Clear();
                     Console.WriteLine("===== | GERENCIADOR DE VEÍCULOS | =====");
                     Console.WriteLine();
-                    Console.WriteLine($"Insira o modelo do {t}:");
-                    Console.WriteLine();
-                    System.Console.Write("Modelo: ");
 
+                    Console.WriteLine(GrammarFormatService.GenreFormat(t, $"Insira o modelo do {tipo}: "));
+                    Console.WriteLine();
+
+                    System.Console.Write("Modelo: ");
                     string m = Console.ReadLine();
+
                     service.SetManufacturer(m);
 
                     Console.Clear();
                     Console.WriteLine("===== | GERENCIADOR DE VEÍCULOS | =====");
                     Console.WriteLine();
-                    Console.WriteLine($"Insira a cor do {t}:");
 
+                    Console.WriteLine(GrammarFormatService.GenreFormat(t, $"Insira a cor do {tipo}: "));
                     Console.WriteLine();
 
                     Console.Write("Cores disponíveis: ");
-                    EnumFormatService.Format(Enums.Color.Preto);
+                    EnumFormatService.Format(Enums.Global.Color.Preto);
 
                     Console.WriteLine();
                     Console.Write("Cor: ");
 
                     string c = Console.ReadLine();
-                    service.SetColor((Enums.Color)Enum.Parse(typeof(Enums.Color), c, true));
+                    service.SetColor((Enums.Global.Color)Enum.Parse(typeof(Enums.Global.Color), c, true));
 
                     Vehicle vehicle = new Vehicle(service);
 

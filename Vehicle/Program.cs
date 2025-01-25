@@ -2,9 +2,9 @@
 using Vehicle.Entities.Enums;
 using Vehicle.Entities.Services;
 
-// TODO: 
-// TODO: Criar um serviço para receber determinado Enum, formatar em uma array e mostrar formatado.
-// TODO: Polir o design do menu
+// TODO: Criar lógica para definir o gênero das palavras no menu.
+// TODO: Criar Enums personalizados de acordo com os fabricantes e guardá-los num dicionário.
+// TODO: Polir o design do menu, organizando em classes.
 // TODO: Implementar a classe 'Program'.
 // TODO: Implementar um menu para interação com o programa.
 // TODO: Avaliar a aplicação do try-catch no meu código.
@@ -15,9 +15,9 @@ namespace Vehicle
     {
         public static void Main(string[] args)
         {
-            while(Menu.Show())
+            while(MainMenu.Show())
             {
-                Menu.Show();
+                MainMenu.Show();
 
             }
         }

@@ -1,6 +1,6 @@
 using Vehicle.Entities.Services;
 
-namespace Vehicle.Entities.Enums
+namespace Vehicle.Entities.Enums.Global
 {
     /// <summary>
     /// Este Enum contém a lista de tipos disponíveis para os veículos.
@@ -12,7 +12,7 @@ namespace Vehicle.Entities.Enums
     /// <seealso cref="OrderVehicleService"/>
     public enum Type
     {
-        Moto,
+        Motocicleta,
         Carreta,
         Bicicleta,
         Carro,

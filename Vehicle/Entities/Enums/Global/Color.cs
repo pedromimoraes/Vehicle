@@ -1,6 +1,6 @@
 using Vehicle.Entities.Services;
 
-namespace Vehicle.Entities.Enums
+namespace Vehicle.Entities.Enums.Global
 {
     /// <summary>
     /// Este Enum contém a lista de cores disponíveis para os veículos.
